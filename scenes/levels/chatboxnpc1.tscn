@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://102kkqfmnil6"]
+
+[ext_resource type="Script" uid="uid://bo4iyr74a8h2q" path="res://scenes/levels/chatboxnpc_1.gd" id="1_icpsf"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1870969326]
+script = ExtResource("1_icpsf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=125002954]
+offset_left = 521.0
+offset_top = 255.0
+offset_right = 1329.0
+offset_bottom = 510.0
+
+[node name="npcname" type="Label" parent="VBoxContainer" unique_id=203175561]
+layout_mode = 2
+text = "Gopal G.
+"
+
+[node name="dialogue" type="Label" parent="VBoxContainer" unique_id=202872773]
+layout_mode = 2
+text = "What a wonderful ass you have."

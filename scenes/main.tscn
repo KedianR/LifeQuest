@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cf002tnv871a7"]
+
+[ext_resource type="PackedScene" uid="uid://coic1s3640ifi" path="res://scenes/playerr.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dmt1qqg24unxy" path="res://scenes/levels/level1.tscn" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://s4sax3ic26be" path="res://scenes/npc1.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dgskwitxq8k5i" path="res://scenes/npc2.tscn" id="4_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dqu1x4inhblwn" path="res://scenes/npc3.tscn" id="6_o6xl0"]
+[ext_resource type="Script" uid="uid://caq3rq1eb8pjn" path="res://scenes/levels/mall.gd" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://c4xd0xhbvpxg6" path="res://scenes/npc4.tscn" id="7_tipki"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tefeu"]
+size = Vector2(77, 65.99997)
+
+[node name="main" type="Node2D" unique_id=742562048]
+position = Vector2(0, 1)
+
+[node name="level" parent="." unique_id=1942224564 instance=ExtResource("1_sugp2")]
+position = Vector2(-297, -211)
+
+[node name="NPC1" parent="." unique_id=1960812283 instance=ExtResource("4_jyhfs")]
+position = Vector2(-1, -157)
+
+[node name="npc2" parent="." unique_id=448781633 instance=ExtResource("4_tbgi4")]
+position = Vector2(1144.0001, 530)
+scale = Vector2(1.6, 1.6)
+
+[node name="npc3" parent="." unique_id=1072802038 instance=ExtResource("6_o6xl0")]
+position = Vector2(-45, 1435)
+
+[node name="npc4" parent="." unique_id=1553899467 instance=ExtResource("7_tipki")]
+position = Vector2(2623, 1446)
+
+[node name="playerr" parent="." unique_id=1026123236 instance=ExtResource("1_o5qli")]
+position = Vector2(1123, 307)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=347850694]
+position = Vector2(-297, -211)
+script = ExtResource("7_o6xl0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1403181326]
+position = Vector2(3002, 966)
+shape = SubResource("RectangleShape2D_tefeu")
